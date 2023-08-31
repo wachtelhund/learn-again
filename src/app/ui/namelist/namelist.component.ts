@@ -15,12 +15,6 @@ export class NamelistComponent {
   constructor() {
   }
 
-  ngOnInit() {
-    this.names.subscribe((names) => {
-      console.log('names', names);
-    });
-  }
-
   onSelectionChange(selectedOptions: MatListOption[]) {
     this.selectedNames = selectedOptions.map((option) => option.value);
   }

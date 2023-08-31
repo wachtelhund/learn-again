@@ -1,6 +1,7 @@
 button {
     margin-top: 10px;
     margin-bottom: 10px;
+    transition: all 0.2s ease;
 }
 mat-selection-list {
     z-index: 100;
@@ -9,5 +10,6 @@ mat-selection-list {
 }
 
 .hidden {
-    display: none;
+    opacity: 0;
+    transform: rotateY(90deg);
 }
