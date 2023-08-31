@@ -1,5 +1,7 @@
 <div>
-  <label for="name">Name: </label>
-  <input id="name" [formControl]="name" type="text">
-  <button (click)="submitForm()">Submit</button>
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input [formControl]="name" matInput required>
+  </mat-form-field>
+  <button color="primary" mat-raised-button (click)="submitForm()">Submit</button>
 </div>

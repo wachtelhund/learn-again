@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -7,12 +7,16 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./nameform.component.scss']
 })
 export class NameformComponent {
-  name = new FormControl<string>('')
+  name = new FormControl<any>('')
+  @Output() nameAdded = new EventEmitter<string>();
 
   ngOnInit() {
   }
 
   submitForm() {
-    console.log(this.name);
+    if (!this.name.valid) {
+      return;
+    }
+    this.nameAdded.emit(this.name.value);
   }
 }

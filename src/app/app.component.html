@@ -1,4 +1,4 @@
 <div>
-  <app-nameform></app-nameform>
-  <app-namelist></app-namelist>
+  <app-nameform (nameAdded)="addToList($event)"></app-nameform>
+  <app-namelist [names]="listedNames"></app-namelist>
 </div>
