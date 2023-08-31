@@ -24,4 +24,10 @@ export class NamelistComponent {
   onSelectionChange(selectedOptions: MatListOption[]) {
     this.selectedNames = selectedOptions.map((option) => option.value);
   }
+
+  onDeleteSelected() {
+    const newNames = this.names.value.filter((name) => !this.selectedNames.includes(name));
+    this.selectedNames = [];
+    this.names.next(newNames);
+  }
 }

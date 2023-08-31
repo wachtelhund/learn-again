@@ -1,8 +1,13 @@
 button {
-    position: absolute;
-    right: 0;
-    display: inline;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 mat-selection-list {
-    z-index: 100a;
+    z-index: 100;
+    margin-top: 0px;
+    border: 1px solid #ccc;
+}
+
+.hidden {
+    display: none;
 }
